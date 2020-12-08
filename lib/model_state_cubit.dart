@@ -17,6 +17,8 @@ class ModelStateCubit extends Cubit<ModelStateState> {
 
   void addSelected(String selected) {
     final itemsSelected = [...state.itemsSelected];
+    final actualState = state;
+
     if (!itemsSelected.remove(selected)) {
       itemsSelected.add(selected);
     }
